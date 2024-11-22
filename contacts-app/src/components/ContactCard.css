@@ -1,6 +1,5 @@
 /* ContactCard.css */
 
-/* 卡片样式 */
 .icon {
     margin-right: 8px;
     color: #007bff;
@@ -18,11 +17,10 @@
   }
   
   .contact-card:hover {
-    transform: none; /* 移除悬浮效果 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 保持原样 */
+    transform: none; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
-  /* 移除不必要 hover 样式 */
   .contact-card h3,
   .contact-card p {
     margin: 5px 0;
@@ -118,9 +116,9 @@
 
 .contact-detail {
     display: flex;
-    flex-direction: column; /* 垂直排列 */
-    align-items: center; /* 居中对齐 */
-    margin: 8px 0; /* 行间距 */
+    flex-direction: column; 
+    align-items: center; 
+    margin: 8px 0; 
   }
   
   .left-container {
@@ -131,13 +129,13 @@
   }
   
   .right-container {
-    text-align: center; /* 使内容居中 */
+    text-align: center; 
   }
   
   .left-container .icon {
     margin-right: 8px;
-    color: #007bff; /* 图标颜色 */
-    font-size: 1.2rem; /* 图标大小 */
+    color: #007bff; 
+    font-size: 1.2rem; 
   }
   
   .left-container span {
@@ -145,7 +143,13 @@
   }
   
   .right-container span {
-    color: #555; /* 文本颜色 */
+    color: #555; 
+  }
+  .map-container {
+    margin: 20px 0;
+    border-radius: 0px; 
+    overflow: hidden;
+    max-height: 200px; 
   }
   
   

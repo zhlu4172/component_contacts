@@ -7,11 +7,11 @@
 
 .contact-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 动态调整列数 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 20px;
   width: 100%;
-  max-width: 1200px; /* 限制最大宽度 */
-  padding:0 20px; /* 添加左右内边距 */
+  max-width: 1200px; 
+  padding:0 20px; 
 }
 
 .pagination {
