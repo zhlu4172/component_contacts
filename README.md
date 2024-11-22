@@ -78,20 +78,6 @@ This will open the application in your default browser at [http://localhost:3000
 
 ---
 
-## Using the Application
-
-### Features
-1. **Grid and List Views**: Toggle between the grid and list views using the icons in the top-right corner.
-2. **View Details**: Click "View Details" on any contact to see additional details in a popup.
-3. **Pagination**: Use the pagination controls at the bottom to navigate through pages.
-
-### Steps to Use
-1. Start the server using `npm start`.
-2. Explore the application by switching between views.
-3. Click "View Details" to see a contact's additional information.
-
----
-
 ## Building for Production
 
 To create a production-ready build of the application, use the following command:
