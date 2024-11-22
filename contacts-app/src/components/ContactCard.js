@@ -105,12 +105,8 @@ const ContactCard = ({ contact, isGridView }) => {
       <div className="contact-column">{contact.name}</div>
       <div className="contact-column">{contact.email}</div>
       <div className="contact-column">{contact.phone}</div>
-      <div className="contact-column">
-        <span>{contact.address.city}</span>
-        <div className="view-details-inline" onClick={() => setShowDetails(true)}>
-          View Details
-        </div>
-      </div>
+      <div className="contact-column"> {contact.address.city}</div>
+      <div className="view-details-inline" onClick={() => setShowDetails(true)}>View Details</div>
 
       {showDetails && (
         <div className="details-overlay" onClick={handleOverlayClick}>

@@ -66,11 +66,27 @@ const ContactList = () => {
       </div>
 
       {/* Contact List */}
-      <div className={`contact-list ${isGridView ? 'grid-view' : 'list-view'}`}>
+      {/* <div className={`contact-list ${isGridView ? 'grid-view' : 'list-view'}`}>
         {currentContacts.map((contact) => (
           <ContactCard key={contact.id} contact={contact} isGridView={isGridView} />
         ))}
-      </div>
+      </div> */}
+      <div className={`contact-list ${isGridView ? 'grid-view' : 'list-view'}`}>
+        {!isGridView && (
+            // Header Row for List View
+            <div className="contact-header">
+            <div className="header-column">Name</div>
+            <div className="header-column">Email</div>
+            <div className="header-column">Phone</div>
+            <div className="header-column">Address</div>
+            <div className="header-column">Actions</div>
+            </div>
+        )}
+        {currentContacts.map((contact) => (
+            <ContactCard key={contact.id} contact={contact} isGridView={isGridView} />
+        ))}
+        </div>
+
 
       {/* Pagination */}
       <div className="pagination">
