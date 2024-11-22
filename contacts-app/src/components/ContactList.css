@@ -1,0 +1,14 @@
+/* ContactList.css */
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px;
+    gap: 20px;
+  }
+  
+  .contact-card {
+    flex: 1 1 calc(33% - 40px);
+    max-width: 300px;
+  }
+  
