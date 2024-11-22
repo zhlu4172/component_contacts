@@ -1,6 +1,12 @@
 /* ContactCard.css */
 
 /* 卡片样式 */
+.icon {
+    margin-right: 8px;
+    color: #007bff;
+    vertical-align: middle;
+  }
+  
 .contact-card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -108,6 +114,40 @@
   .details-content button:hover {
     background-color: #0056b3; 
   }
+
+
+.contact-detail {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 居中对齐 */
+    margin: 8px 0; /* 行间距 */
+  }
+  
+  .left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .right-container {
+    text-align: center; /* 使内容居中 */
+  }
+  
+  .left-container .icon {
+    margin-right: 8px;
+    color: #007bff; /* 图标颜色 */
+    font-size: 1.2rem; /* 图标大小 */
+  }
+  
+  .left-container span {
+    font-weight: bold;
+  }
+  
+  .right-container span {
+    color: #555; /* 文本颜色 */
+  }
+  
   
   @keyframes fadeIn {
     from {

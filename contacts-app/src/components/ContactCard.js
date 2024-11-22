@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import "./ContactCard.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import './ContactCard.css';
 
 const ContactCard = ({ contact }) => {
   const [showDetails, setShowDetails] = useState(false);
 
   const handleOverlayClick = (e) => {
-    // 点击背景时关闭弹窗
+    // Close the pop up when click on the background
     if (e.target.classList.contains("details-overlay")) {
       setShowDetails(false);
     }
@@ -14,9 +16,39 @@ const ContactCard = ({ contact }) => {
   return (
     <div className="contact-card">
       <h3>{contact.name}</h3>
-      <p>Email: {contact.email}</p>
-      <p>Phone: {contact.phone}</p>
-      <p>Address: {contact.address.city}</p>
+
+      {/* Email */}
+      <div className="contact-detail">
+        <div className="left-container">
+          <FontAwesomeIcon icon={faEnvelope} className="icon" />
+          <span>Email</span>
+        </div>
+        <div className="right-container">
+          <span>{contact.email}</span>
+        </div>
+      </div>
+      
+      {/* Phone */}
+      <div className="contact-detail">
+        <div className="left-container">
+          <FontAwesomeIcon icon={faPhone} className="icon" />
+          <span>Phone</span>
+        </div>
+        <div className="right-container">
+          <span>{contact.phone}</span>
+        </div>
+      </div>
+
+      {/* Address */}
+      <div className="contact-detail">
+        <div className="left-container">
+          <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
+          <span>Address</span>
+        </div>
+        <div className="right-container">
+          <span>{contact.address.city}</span>
+        </div>
+      </div>
 
       {/* 点击 View Details 展示弹窗 */}
       <div className="view-details" onClick={() => setShowDetails(true)}>
