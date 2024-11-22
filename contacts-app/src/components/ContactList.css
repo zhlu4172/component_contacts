@@ -1,14 +1,42 @@
-/* ContactList.css */
+.contact-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
 .contact-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 80px;
-    gap: 20px;
-  }
-  
-  .contact-card {
-    flex: 1 1 calc(33% - 40px);
-    max-width: 300px;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 动态调整列数 */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* 限制最大宽度 */
+  padding:0 20px; /* 添加左右内边距 */
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  font-weight: bold;
+}

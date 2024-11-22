@@ -1,10 +1,122 @@
 /* ContactCard.css */
-.card {
+
+/* 卡片样式 */
+.contact-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    cursor: pointer;
   }
   
-  .card-body {
-    text-align: left;
+  .contact-card:hover {
+    transform: none; /* 移除悬浮效果 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 保持原样 */
+  }
+  
+  /* 移除不必要 hover 样式 */
+  .contact-card h3,
+  .contact-card p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .view-details {
+    font-size: 0.9rem;
+    color: #007bff;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .view-details:hover {
+    text-decoration: none;
+  }
+  
+  /* 弹出层样式 */
+  .details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .details-content {
+    background-color: #f9f9f9; 
+    padding: 30px;
+    border-radius: 15px;
+    width: 50%;
+    max-width: 700px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    animation: fadeIn 0.3s ease-in-out; 
+    text-align: left; 
+  }
+  
+  .details-content h3 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333; 
+    text-align: center; 
+    border-bottom: 2px solid #ddd; 
+    padding-bottom: 10px;
+  }
+  
+  .details-content p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #555; 
+  }
+  
+  .details-content p strong {
+    flex: 0 0 30%; 
+    color: #333; 
+  }
+  
+  .details-content p span {
+    flex: 1; 
+    text-align: left; 
+  }
+  
+  
+  .details-content button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px; 
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .details-content button:hover {
+    background-color: #0056b3; 
+  }
+  
+  @keyframes fadeIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
   
