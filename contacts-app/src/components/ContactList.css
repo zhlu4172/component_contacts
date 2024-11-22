@@ -2,7 +2,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px auto;
+  margin: 20px auto;/* Grid View */
+  .contact-list.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  /* List View */
+  .contact-list.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  /* List View Row Styles */
+  .contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-row .contact-column {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .contact-row .view-details-inline {
+    font-size: 0.9rem;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .contact-row .view-details-inline:hover {
+    text-decoration: none;
+  }
+  
 }
 
 .contact-list {
@@ -13,6 +61,8 @@
   max-width: 1200px; 
   padding:0 20px; 
 }
+
+
 
 .pagination {
   margin-top: 20px;
@@ -40,3 +90,29 @@
   font-size: 16px;
   font-weight: bold;
 }
+
+.view-toggle {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  
+  .toggle-icon {
+    font-size: 1.8rem; /* Icon size */
+    color: #007bff; /* Blue color */
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  .toggle-icon.active {
+    color: #0056b3; /* Darker blue for active */
+  }
+  
+  .toggle-icon:hover {
+    color: #0056b3;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
